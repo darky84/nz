@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="Stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="Stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="Stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.css">
+    <style>body {
+    width: 600px;
+}
+
+.row {
+    overflow: hidden;
+}
+
+.card {
+    min-width: 600px;
+}
+
+.card-subtitle {
+    padding-left: 30px;
+}
+
+.day:nth-child(even) div {
+    background-color: #e9f6f7;
+}.home {
+    color: red;
+    background-color: black;
+}
+
+.stop {
+    color: white !important;
+    background-color: black !important;
+}
+        .date {
+            font-size: smaller;
+            font-weight: bold;
+            text-decoration: underline;
+            white-space: nowrap;
+        }
+
+        .flow-icon {
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: black;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .flow-line-container {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background-color: transparent !important;
+        }
+
+        .flow-line {
+            border-left: 1px solid #759fbc;
+            width: 0;
+            min-height: 20px;
+            margin: 0 auto;
+            height: inherit;
+        }
+
+        .flow-line-dn {
+            height: 100%;
+        }
+
+        .flow-data {
+            color: #4c4c4c;
+            padding-top: 3px;
+            font-size: smaller;
+            text-align: center;
+        }
+
+        .flow-data i, .flow-data span, .description-title {
+            display: block;
+        }
+
+        .description {
+            min-height: 50px;
+        }
+
+        .description-details {
+            font-size: smaller;
+        }
+
+        .transfer-line-end {
+            border-left: 1px solid #759fbc;
+            width: 2px;
+            height: 30px;
+            margin-left: 15px;
+        }
+
+        .overnight {
+            border-right: 1px dashed #759fbc;
+            border-left: 1px dashed #759fbc;
+        }
+
+        .overnight-top {
+            border-top: 1px dashed #759fbc;
+        }
+
+        .overnight-bottom {
+            border-bottom: 1px dashed #759fbc;
+        }
+
+        .overnight-line {
+            border-left: 3px solid #759fbc;
+            min-height: 20px;
+            height: 100%;
+            margin: 0 auto;
+            width: 0;
+        }
+
+        .overnight-line-container {
+            height: auto;
+        }
+
+        .overnight-description {
+            min-height: 0;
+        }
+        </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">Nuova Zelanda&nbsp;<span class="flag-icon flag-icon-nz"></span></h1>
+        <h5 class="card-subtitle text-muted">dal 12/02 al 04/03</h5>
+      </div>
+      <div class="card-body">
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">mar 12/02</div>
+            <div class="col-3 transfer">
+              <div class="flow-icon home"><i class="fas fa-home home"></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Catland&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-bus "></i><span>1h</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-plane-departure "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Roma Fiumicino&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-line-container overnight-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 overnight-description"></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">mer 13/02</div>
+            <div class="col-3 transfer">
+              <div class="flow-line flow-line-up"></div>
+              <div class="flow-data"><i class="fas fa-plane "></i><span>24h</span><span></span></div>
+              <div class="flow-line flow-line-dn"></div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-plane-arrival "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Auckland&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-hotel stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Hotel Ibis&nbsp;<i class="far fa-check-square "></i></span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">gio 14/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-car-side "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Autonoleggio Auckland&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>2h30'</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-umbrella-beach "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Cathedral Cove&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>15'</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-umbrella-beach "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Hot water beach&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>2h15'</span><span>150km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Tauranga&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">ven 15/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa- "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Whakatāne&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-ship "></i><span>gita</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-star "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">White Island&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Rotorua&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">sab 16/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-star "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Rotorua(trails)&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-leaf "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Wai-o-tapu&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-hotel stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">National Park&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">dom 17/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-parking "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">National Park 8.00&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-bus "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-tree "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Whakapapa&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span>3km</span><span>1h</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-tree "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Taranaki falls&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span>4km</span><span>1h</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-tree "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Tama Lakes 10' 1h30'&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span>8,3km</span><span>3h</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-hotel "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Waikokonu hut&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span>8km</span><span>3h</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-hotel stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Oturere hut&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">lun 18/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span>4,5km</span><span>1h 30'</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-tree "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Emerald lakes&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span>20'</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-tree "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">*-&gt; Blue lake (A/R)&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-tree "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Red crater&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-tree "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">South crater&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-tree "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Soda springs&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span>8km</span><span>3h 30'(da E.L.)</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-hotel "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Mangatepopo Hut&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span>2km</span><span>20'</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-parking "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Road end&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-bus "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-parking "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">National Park&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>2h</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Waitomo&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">mar 19/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-walking "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Visite di waitomo&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Waitomo&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">mer 20/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>2h 30'</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-car-side "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Autonoleggio Auckland&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-plane-departure "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Auckland 13.00&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-plane "></i><span>1h 30'</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-plane-arrival "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Christchurch 14.30&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-car-side "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Autonoleggio Cristchurch&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span>1h 40'</span><span>140km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Bealey&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">gio 21/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>10'</span><span>12km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-road "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Arthur's pass&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>3h</span><span>230km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-question-circle "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Tatare Tunnel Walk&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span>20km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-bed "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Franz Josef Glacier&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span>26km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-shoe-prints "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Lakes&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span>20km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Franz Josef Glacier&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">ven 22/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-star "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Franz Josef Glacier&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-helicopter "></i><span></span><span>26km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-snow-flakes "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Visita&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>25'</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Fox Glacier&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">sab 23/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>3h</span><span>280km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Wanaka&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">dom 24/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-shoe-prints "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Glenorchy&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Tuatapaere&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">lun 25/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-compass stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Trail Humpridge track&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Hut #1&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">mar 26/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-compass "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Trekking&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Hut #2&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">mer 27/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-compass "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Trekking&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Queenstown&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">gio 28/02</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-bus "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-ship "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Milford Sound&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-bus "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Queenstown&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">ven 01/03</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>2h30'</span><span>207km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-road "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Pukaki (trekking)&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>'</span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-question "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Kettlehole track (1h)&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>1h</span><span>60km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-shoe-prints "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Hooker Valley (3h)&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span>10km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-shoe-prints "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Tasman Lake (2,5km/1h)&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>40'</span><span>50km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Tekapo&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">sab 02/03</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>5h</span><span>400km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-kiwi-bird "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Kaikoura&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon stop"><i class="fas fa-bed stop"></i></div>
+            </div>
+            <div class="col-7 overnight overnight-top"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight"><span class="description-title">Kaikoura&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">dom 03/03</div>
+            <div class="col-3 transfer">
+              <div class="overnight-line"></div>
+            </div>
+            <div class="col-7 overnight overnight-bottom"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-car "></i><span>3h</span><span>180km</span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-car-side "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Autonoleggio Cristchurch&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-data"><i class="fas fa-walking "></i><span></span><span></span></div>
+              <div class="flow-line-container">
+                <div class="flow-line"></div>
+              </div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-plane-departure "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Christchurch 15.45&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-line-container overnight-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 overnight-description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-line-container overnight-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 overnight-description"></div>
+          </div>
+        </div>
+        <div class="day">
+          <div class="row">
+            <div class="col-2 date">lun 04/03</div>
+            <div class="col-3 transfer">
+              <div class="flow-line flow-line-up"></div>
+              <div class="flow-data"><i class="fas fa-plane "></i><span></span><span></span></div>
+              <div class="flow-line flow-line-dn"></div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon "><i class="fas fa-plane-arrival "></i></div>
+              <div class="flow-line-container">
+                <div class="flow-line flow-line-dn"></div>
+              </div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Fiumicino 13.05&nbsp;</span><span class="description-details"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-line flow-line-up"></div>
+              <div class="flow-data"><i class="fas fa-bus "></i><span>1h</span><span></span></div>
+              <div class="flow-line flow-line-dn"></div>
+            </div>
+            <div class="col-7 description"></div>
+          </div>
+          <div class="row">
+            <div class="col-2 date"></div>
+            <div class="col-3 transfer">
+              <div class="flow-icon home"><i class="fas fa-home home"></i></div>
+            </div>
+            <div class="col-7 description"><span class="description-title">Catland&nbsp;</span><span class="description-details"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
